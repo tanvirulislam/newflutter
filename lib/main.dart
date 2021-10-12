@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:test/registration.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: NewApp()));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Registration()));
 }
 
 class NewApp extends StatefulWidget {
@@ -10,7 +11,7 @@ class NewApp extends StatefulWidget {
 }
 
 class _NewAppState extends State<NewApp> {
-  int My_level = 0;
+  int myLevel = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +29,7 @@ class _NewAppState extends State<NewApp> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            My_level += 1;
+            myLevel += 1;
           });
         },
         child: Icon(Icons.add),
@@ -72,7 +73,7 @@ class _NewAppState extends State<NewApp> {
             ),
             SizedBox(height: 10),
             Text(
-              '$My_level',
+              '$myLevel',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
